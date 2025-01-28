@@ -23,10 +23,11 @@ with tab2:
         st.header("Decrease of fossil fuel usage")
         # with col2:
         # tile = row1[0].container(height=120)
-        country = row1[0].selectbox(
+        country = row1[0].multiselect(
             "Select country",
             df_energy.index.unique(),
-            index=88
+            default=["Europe", "World"],
+            label_visibility="hidden" 
         )
         param = row1[1].selectbox(
             "Select parameter",

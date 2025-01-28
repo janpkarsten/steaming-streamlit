@@ -23,7 +23,7 @@ df_world = df_shares.loc["World"]
 def create_figure(param: str = "fossil_share_energy", 
                   country: str = "Europe") -> go.Figure:
 
-    df_country = df_shares.loc[[country, "World"]].dropna(subset=param)
+    df_country = df_shares.loc[country].dropna(subset=param)
 
     lookup_param = df_param.loc[param]
     title_str = lookup_param["description"].split("-")[0]
